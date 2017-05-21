@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>TP1 in HTML5 Skeleton</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS, JS External 정의 -->
+	<link rel="stylesheet" type="text/css" href="./css/TP1_CSS_SKELETON.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+</head>
+<body>
+	<!-- 레이아웃은 HTML5 엘리먼트를 사용할 것 -->
+	<header>
+		<!-- Header (Menu bar) -->
+		<div id="Bar" class="Bar">
+			<div class="MenuWrapper">
+				<button class="Menu" onclick="menuMoveTo('Bar')">HOME</button>
+				<button class="Menu" onclick="menuMoveTo('ImageSlide')">IMAGE SLIDE</button>
+				<button class="Menu" onclick="menuMoveTo('Introduce')">INTRODUCE</button>
+				<button class="Menu" onclick="menuMoveTo('Gallery')">GALLERY</button>
+				<button class="Menu" onclick="menuMoveTo('Guestbook')">GUEST BOOK</button>
+			</div>
+			<div class="MenuIconWrapper">
+				<div class="MenuIcon" onclick="menuAnimation()">
+					<div class="MenuIcon1"></div>
+					<div class="MenuIcon2"></div>
+					<div class="MenuIcon3"></div>
+				</div>
+					<div class="MenuDropdown" id="MenuDropdown">
+						<ul>
+							<li onclick="menuMoveTo('Bar')">HOME</li>
+							<li onclick="menuMoveTo('ImageSlide')">IMAGE SLIDE</li>
+							<li onclick="menuMoveTo('Introduce')">INTRODUCE</li>
+							<li onclick="menuMoveTo('Gallery')">GALLERY</li>
+							<li onclick="menuMoveTo('Guestbook')">GUEST BOOK</li>
+						</ul>
+					</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div id="ImageSlide" class = "ImageSlide">
+				<!-- 슬라이드 시작 -->
+				<ul id="slider">
+						<li>
+							<img src="img/eminem/14.png" draggable="false">
+						</li>
+						<li>
+							<img src="img/eminem/13.png" draggable="false">
+						</li>
+						<li>
+							<img src="img/eminem/12.png" draggable="false">
+						</li>
+						<li>
+							<img src="img/eminem/15.png" draggable="false">
+						</li>
+						<li>
+							<img src="img/eminem/16.png" draggable="false">
+						</li>
+				</ul>
+				<!-- 슬라이드 좌우 넘기기 버튼 -->
+				<div class="slideButton left" id="left"><img src="img/slide_button/left.gif" draggable="false" /></div>
+				<div class="slideButton right" id="right"><img src="img/slide_button/right.gif" draggable="false" /></div>
+				<!-- 슬라이드 밑의 버튼으로 넘기기 -->
+				<div id ="slideBottomButtonWrapper">
+						<div class="slideBottomButton first" onclick="bottomButtonSliding(0)"></div>
+						<div class="slideBottomButton second" onclick="bottomButtonSliding(1)"></div>
+						<div class="slideBottomButton third" onclick="bottomButtonSliding(2)"></div>
+						<div class="slideBottomButton fourth" onclick="bottomButtonSliding(3)"></div>
+						<div class="slideBottomButton fifth" onclick="bottomButtonSliding(4)"></div>
+				</div>
+		</div>
+		<div id="Introduce" class = "Introduce">
+				<table class = "IntroTable">
+					<thead class = "IntroHead">
+						<tr>
+							<th colspan = "2"><h2>EMINEM</h2></th>
+						</tr>
+					</thead>
+					<tfoot class = "IntroHead">
+						<tr>
+							<td colspan = "2">
+								<a href="https://www.facebook.com/eminem/" target="_blank"><img src="img/icon/facebook.png" width="40px" height="40px" draggable="false"></a>
+								<a href="https://www.youtube.com/user/EMINEMMusic" target="_blank"><img src="img/icon/youtube.png" width="40px" height="40px" draggable="false"></a>
+							</td>
+						</tr>
+					</tfoot>
+					<tbody class = "IntroBody">
+						<tr>
+							<!-- arbor.js View -->
+							<!--<td id="td_arbor"><canvas id="arbor" width="1000" height="800"></canvas></td>-->
+							<td id="fb-page"><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Feminem%2F&tabs=timeline&width=500&height=800&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="800" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></td>
+							<td>
+								<div class="pageIntro">
+										<h2>Page Introduction</h2>
+										<p>
+											This page is <a href="#">Eminem's fan page</a>.</br>
+											You can get informations about Eminem's profile, life, career, albums, photos.</br>
+											And also we has provided links to Eminem's official page, facebook, youtube.</br>
+											Please, look around the page.
+										</p>
+								</div>
+								<div class="profile">
+										<h2>PROFILE</h2>
+										<div class="profileImage">
+												<p>
+													<img src="img/eminem/profile.jpg">
+												</p>
+										</div>
+										<div class="profileContent">
+												<p>Name : <span>Eminem</span> ( Marshall Bruce Mathers lll )</p>
+												<p>Famous as : <span>Hip hop musician</span></p>
+												<p>Birth Date : October 17, 1972</p>
+												<p>Birth Place : Kansas City, Missouri, USA</p>
+										</div>
+										<div class="profileCareer">
+												<h2>Life and career</h2>
+												<p><a href="https://en.wikipedia.org/wiki/Eminem#1972.E2.80.931991:_Early_life" target="_blank">1972–1991: Early life</a></p>
+												<p><a href="https://en.wikipedia.org/wiki/Eminem#1992.E2.80.931999:_Early_career.2C_Infinite.2C_and_The_Slim_Shady_LP" target="_blank">1992–1999: Early career, Infinite, and The Slim Shady LP</a></p>
+												<p><a href="https://en.wikipedia.org/wiki/Eminem#2000.E2.80.932002:_The_Marshall_Mathers_LP_and_The_Eminem_Show" target="_blank">2000–2002: The Marshall Mathers LP and The Eminem Show</a></p>
+												<p><a href="https://en.wikipedia.org/wiki/Eminem#2003.E2.80.932007:_Encore_and_musical_hiatus" target="_blank">2003–2007: Encore and musical hiatus</a></p>
+												<p><a href="https://en.wikipedia.org/wiki/Eminem#2008.E2.80.932009:_Relapse_and_Refill" target="_blank">2008–2009: Relapse and Refill</a></p>
+												<p><a href="https://en.wikipedia.org/wiki/Eminem#2010.E2.80.932011:_Recovery_and_Bad_Meets_Evil_reunion" target="_blank">2010–2011: Recovery and Bad Meets Evil reunion</a></p>
+												<p><a href="https://en.wikipedia.org/wiki/Eminem#2012.E2.80.932013:_The_Marshall_Mathers_LP_2" target="_blank">2012–2013: The Marshall Mathers LP 2</a></p>
+												<p><a href="https://en.wikipedia.org/wiki/Eminem#2014.E2.80.93present:_Shady_XV.2C_Southpaw.2C_and_upcoming_new_album" target="_blank">2014–present: Shady XV, Southpaw, and upcoming new album</a></p>
+										</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+		</div>
+		<div id="Gallery" class = "Gallery">
+				<!-- 겔러리 사진 목록 시작 -->
+				<div class="galleryImg">
+						<img src="img/eminem/album1.jpg" draggable="false" onclick="galleryModalOpen(0)">
+						<div class="middle">
+							<div class="text">8 Mile</div>
+						</div>
+						<div class="imgDelete" onclick="galleryDel(0)">
+							<img src="img/modal_button/x.PNG" draggable="false" />
+						</div>
+				</div>
+				<div class="galleryImg">
+						<img src="img/eminem/album2.jpg" draggable="false" onclick="galleryModalOpen(1)">
+						<div class="middle">
+							<div class="text">Curtain Call</div>
+						</div>
+						<div class="imgDelete" onclick="galleryDel(1)">
+							<img src="img/modal_button/x.PNG" draggable="false" />
+						</div>
+				</div>
+				<div class="galleryImg">
+						<img src="img/eminem/album3.jpg" draggable="false" onclick="galleryModalOpen(2)">
+						<div class="middle">
+							<div class="text">Recovery</div>
+						</div>
+						<div class="imgDelete" onclick="galleryDel(2)">
+							<img src="img/modal_button/x.PNG" draggable="false" />
+						</div>
+				</div>
+				<div class="galleryImg">
+						<img src="img/eminem/album5.jpg" draggable="false" onclick="galleryModalOpen(3)">
+						<div class="middle">
+							<div class="text">Relapse</div>
+						</div>
+						<div class="imgDelete" onclick="galleryDel(3)">
+							<img src="img/modal_button/x.PNG" draggable="false" />
+						</div>
+				</div>
+				<div class="galleryImg">
+						<img src="img/eminem/album6.png" draggable="false" onclick="galleryModalOpen(4)">
+						<div class="middle">
+							<div class="text">The Eminem Show</div>
+						</div>
+						<div class="imgDelete" onclick="galleryDel(4)">
+							<img src="img/modal_button/x.PNG" draggable="false" />
+						</div>
+				</div>
+				<div class="galleryImg">
+						<img src="img/eminem/album4.jpg" draggable="false" onclick="galleryModalOpen(5)">
+						<div class="middle">
+							<div class="text">The Marshall Mathers LP2</div>
+						</div>
+						<div class="imgDelete" onclick="galleryDel(5)">
+							<img src="img/modal_button/x.PNG" draggable="false" />
+						</div>
+				</div>
+				<!-- 겔러리 사진 목록 끝 -->
+				<!-- 모달창 시작 -->
+				<div id="pop_gallery" class="pop_gallery">
+						<div class="pop_galleryBg"></div>
+						<div class="pop_galleryImg">
+							<img src="img/eminem/album1.jpg" draggable="false" onclick="galleryModalClose()">
+						</div>
+						<div class="pop_galleryImg">
+							<img src="img/eminem/album2.jpg" draggable="false" onclick="galleryModalClose()">
+						</div>
+						<div class="pop_galleryImg">
+							<img src="img/eminem/album3.jpg" draggable="false" onclick="galleryModalClose()">
+						</div>
+						<div class="pop_galleryImg">
+							<img src="img/eminem/album5.jpg" draggable="false" onclick="galleryModalClose()">
+						</div>
+						<div class="pop_galleryImg">
+							<img src="img/eminem/album6.png" draggable="false" onclick="galleryModalClose()">
+						</div>
+						<div class="pop_galleryImg">
+							<img src="img/eminem/album4.jpg" draggable="false" onclick="galleryModalClose()">
+						</div>
+						<div class="pop_button_left">
+							<img src="img/modal_button/left.PNG" draggable="false" onclick="modalLeftSlide()">
+						</div>
+						<div class="pop_button_right">
+							<img src="img/modal_button/right.PNG" draggable="false" onclick="modalRightSlide()">
+						</div>
+				</div>
+				<!-- 모달창 끝 -->
+		</div>
+		<div id="Guestbook" class = "Guestbook">
+			<div id="commentView"></div>
+				<table>
+					<thead>
+						<tr>
+							<th colspan="2"><h2>방명록</h2></th>
+						</tr>
+					</thead>
+					<form method="post">
+						<tbody>
+								<tr>
+									<td class="commentDiv">작성자</td>
+									<td><input type="text" name="writer" placeholder="Writer" required></td>
+								</tr>
+								<tr>
+									<td class="commentDiv">내용</td>
+									<td><input type="text" name="comment" placeholder="Comment" required></td>
+								</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="2"><input type="button" value="등록하기" onclick="receiveComment()"></td>
+							</tr>
+						</tfoot>
+					</form>
+				</table>
+		</div>
+	</main>
+
+	<footer>
+		<p>Chungnam National University, <span>201302433</span>, <span>오준석</span>, 201302433@cs-cnu.org</p>
+	</footer>
+
+<script src="js/menu.js"></script>
+<script src="js/slide.js"></script>
+<script src="js/gallery.js"></script>
+<!--<script src="js/lib/arbor.js"></script>-->
+<script src="js/main_arbor.js"></script>
+<script src="js/guestbook.js"></script>
+</body>
+
+</html>

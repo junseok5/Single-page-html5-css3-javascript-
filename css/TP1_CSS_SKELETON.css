@@ -1,0 +1,544 @@
+@CHARSET "UTF-8";
+
+/* Menu bar Start */
+div.Bar {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #000;
+}
+.Bar .Menu {
+  color: #fff;
+}
+.Bar .Menu:hover {
+  background-color: #126978;
+  cursor: pointer;
+}
+div.Bar button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+.MenuWrapper {
+    float:left;
+}
+.MenuIcon {
+    float: left;
+    margin: 4px 0 0 4px;
+    cursor: pointer;
+}
+.MenuIcon1, .MenuIcon2, .MenuIcon3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .MenuIcon1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+/* Fade out the second bar */
+.change .MenuIcon2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .MenuIcon3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.change .MenuDropdown {
+    height: 120px;
+    z-index: 100;
+}
+.MenuDropdown {
+    font-weight: 600;
+    color: #fff;
+    z-index: -1;
+    clear: left;
+    height: 0px;
+    margin-left: 510px;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+    transition-property: all;*/
+}
+.MenuDropdown ul li {
+  cursor: pointer;
+}
+/* Menu bar End */
+
+/* Main Start */
+
+/* ImageSilde Start */
+div.ImageSlide, div.Gallery {
+  position: relative;
+	background-color : #EAEAEA;
+	outline : none;
+	width : 100%;
+	/*height : 384px;*/
+  height: 550px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+div.ImageSlide ul#slider {
+  margin: 0;
+  padding: 0;
+}
+div.ImageSlide ul li {
+  position: absolute;
+  list-style: none;
+  width: 100%;
+  height: 384px;
+}
+div.ImageSlide ul li img{
+  width: 100%;
+  height: auto;
+}
+div.ImageSlide .slideButton {
+  position: absolute;
+  top: 210px;
+}
+div.ImageSlide .left {
+  left: 40px;
+}
+div.ImageSlide .right {
+  right: 40px;
+}
+div.ImageSlide #slideBottomButtonWrapper {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  margin-left: -67.5px;
+}
+div.ImageSlide .slideBottomButton {
+  position: relative;
+  float: left;
+  width: 15px;
+  height: 15px;
+  margin-top: 490px;
+  margin-right: 12px;
+  border-radius: 50%;
+  z-index: 100;
+}
+/* ImageSlide End */
+
+/* Introduce Start */
+div.Introduce, div.Guestbook {
+	background-color : #333333;
+	outline : none;
+	width : 100%;
+	height : auto;
+}
+
+div.Introduce .pageIntro {
+  padding-left: 20px;
+}
+div.Introduce .pageIntro h2 {
+  color: #AFE1FF;
+}
+div.Introduce span{
+  font-size: 20px;
+  color: #FFFF90;
+}
+div.Introduce .pageIntro a, a:visited {
+  font-size: 20px;
+  color: #6799FF;
+  text-decoration: underline;
+}
+div.Introduce table, th, td{
+  color: #fff;
+  border: 2px solid #fff;
+}
+div.Introduce table {
+  width: 100%;
+}
+div.Introduce thead th, tfoot td {
+  height: 50px;
+  text-align: center;
+}
+div.Introduce tfoot td {
+
+}
+div.Introduce tbody td {
+  height: 610px;
+}
+#fb-page {
+  width: 500px;
+}
+/*
+#arbor {
+  width: 100%;
+  height: 770px;
+}
+*/
+div.Introduce .profile {
+  padding-left: 20px;
+}
+div.Introduce .profile h2 {
+  color: #AFE1FF;
+}
+div.Introduce .profileImage {
+  float: left;
+  margin-right: 20px;
+}
+div.Introduce .profileContent {
+  padding-top: 5px;
+}
+div.Introduce .profileCareer {
+  clear: left;
+}
+div.Introduce .profileCareer a, a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+div.Introduce .profileCareer a:hover {
+  color: #B7F0B1;
+}
+/* Introduce End */
+
+/* Gallery Start */
+div.Gallery {
+    width: 100%;
+    height: auto;
+    background-color: #F6F6F6;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+div.Gallery .galleryImg{
+  position: relative;
+  width: 250px;
+  height: auto;
+  float: left;
+  border: 1px solid #BDBDBD;
+  padding: 15px;
+}
+div.Gallery .galleryImg img{
+  width: 250px;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+div.Gallery .galleryImg .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+div.Gallery .galleryImg:hover img{
+  opacity: 0.3;
+}
+div.Gallery .galleryImg:hover .middle {
+  opacity: 1;
+}
+div.Gallery .galleryImg:hover .imgDelete img{
+  opacity: 1;
+}
+div.Gallery .text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+div.Gallery .imgDelete {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+div.Gallery .imgDelete img{
+  width: 20px;
+  height: 20px;
+}
+
+div.Gallery .pop_gallery {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+div.Gallery .pop_galleryBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .5;
+}
+div.Gallery .pop_galleryImg {
+  visibility: hidden;
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  margin: -300px;
+  z-index: 10;
+}
+div.Gallery .pop_galleryImg img {
+  width: 600px;
+  height: 600px;
+}
+div.Gallery .pop_button_left {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+}
+div.Gallery .pop_button_left img {
+  width: 50px;
+  height: 50px;
+}
+div.Gallery .pop_button_right {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+}
+div.Gallery .pop_button_right img {
+  width: 50px;
+  height: 50px;
+}
+/* Gallery End */
+
+/* Guestbook Start */
+div.Guestbook table {
+  width: 100%;
+  height: auto;
+  border-collapse: collapse;
+}
+div.Guestbook tbody .commentDiv {
+  width: 150px;
+  padding: 20px 0 20px 0;
+  text-align: center;
+}
+div.Guestbook tbody input[type=text] {
+  display: inline-block;
+  width: 100%;
+  height: 30px;
+  padding : 0 20px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+div.Guestbook .addWrapper {
+  border: 1px solid #fff;
+}
+div.Guestbook .addWriter {
+  width: 35%;
+  height: 100px;
+  text-align: center;
+  border: 1px solid #fff;
+}
+div.Guestbook .addComment {
+  padding-left: 20px;
+  border: 1px solid #fff;
+}
+div.Guestbook .addReply {
+  text-align: right;
+}
+div.Guestbook .replyView {
+  visibility: hidden;
+  color: #C9FFC3;
+}
+
+/* Open Graph Protocol style */
+div.openGraphProtocol {
+  width: 400px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: #EAEAEA;
+  border: 1px solid #7E7E7E;
+  box-shadow: 1px 1px 10px #B4B4B4;
+}
+div.OGPimg {
+  width: 100px;
+  float: left;
+}
+div.OGPimg img{
+  width: 100px;
+  height: 100px;
+}
+div.OGPinfo {
+  width: 300px;
+  color: #909090;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+div.OGPinfo .title {
+  font-weight: 600;
+  color: #5A5A5A;
+  line-height: 0em;
+}
+div.OGPinfo a, a:visited {
+  text-decoration: none;
+  color: #79AAFF;
+  font-size: 14px;
+}
+/* Guestbook End */
+
+/* Main End */
+
+/* Footer Start */
+footer {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+footer span {
+  font-weight: 600;
+  font-size: 18px;
+}
+/* Footer End */
+
+ @media only screen and (max-width: 768px) {
+   div.MenuWrapper {
+     display: none;
+   }
+   .change .MenuDropdown {
+       margin-left: 0px;
+   }
+   .MenuDropdown {
+       margin-left: 0px;
+   }
+
+   div.ImageSlide {
+     height: 300px;
+   }
+   div.ImageSlide ul li {
+     height: 300px;
+   }
+   div.ImageSlide #slideBottomButtonWrapper {
+     margin-left: -52.5px;
+   }
+   div.ImageSlide .slideBottomButton {
+     width: 13px;
+     height: 13px;
+     margin-right: 8px;
+   }
+   div.ImageSlide .slideButton {
+     position: absolute;
+     top: 110px;
+   }
+   div.ImageSlide .left {
+     left: 10px;
+     margin-top: 22.5px;
+   }
+   div.ImageSlide .left img {
+     width: 45px;
+     height: 45px;
+   }
+   div.ImageSlide .right {
+     right: 10px;
+     margin-top: 22.5px;
+   }
+   div.ImageSlide .right img {
+     width: 45px;
+     height: 45px;
+   }
+
+   #fb-page {
+     display: none;
+  }
+
+   div.Gallery .galleryImg img{
+     width: 100%;
+     height: auto;
+     transition: .5s ease;
+     backface-visibility: hidden;
+   }
+   div.Gallery .imgDelete img{
+     width: 20px;
+     height: 20px;
+   }
+   div.Gallery .pop_galleryImg {
+     margin: -180px;
+   }
+   div.Gallery .pop_galleryImg img {
+     width: 360px;
+     height: 360px;
+   }
+ }
+
+  @media only screen and (max-width: 510px) {
+
+    div.ImageSlide {
+      height: 180px;
+    }
+    div.ImageSlide ul li {
+      height: 180px;
+    }
+    div.ImageSlide .left {
+      left: 5px;
+      top: 90px;
+      margin-top: -17.5px;
+    }
+    div.ImageSlide .left img {
+      width: 35px;
+      height: 35px;
+    }
+    div.ImageSlide .right {
+      right: 5px;
+      top: 90px;
+      margin-top: -17.5px;
+    }
+    div.ImageSlide .right img {
+      width: 35px;
+      height: 35px;
+    }
+    /*
+    div.ImageSlide .slideButton {
+      display: none;
+    }
+    div.ImageSlide #slideBottomButtonWrapper {
+      display: none;
+    }
+    */
+    div.Introduce {
+      text-align: center;
+    }
+    div.Introduce .profileImage {
+      float: none;
+    }
+
+    div.Gallery {
+      height: auto;
+    }
+    div.Gallery .galleryImg{
+      width: 100%;
+    }
+    div.Gallery .pop_galleryImg {
+      margin: -90px;
+    }
+    div.Gallery .pop_galleryImg img {
+      width: 180px;
+      height: 180px;
+    }
+    div.openGraphProtocol {
+      width: 300px;
+    }
+    div.OGPimg {
+      width: 100px;
+    }
+    div.OGPimg img{
+      width: 100px;
+    }
+    div.OGPinfo {
+      width: 200px;
+    }
+  }
